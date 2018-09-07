@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TodoListView from './TodoListView';
 
 class App extends Component {
   constructor(props) {
@@ -28,6 +29,8 @@ class App extends Component {
           <button className="button" onClick={this.handleAddClick}>ADD</button>
           <button className="button" onClick={this.handleResetClick}>RESET</button>
         </p>
+
+        <TodoListView todoListStore={this.props.todoListStore} />
       </div>
     );
   }
