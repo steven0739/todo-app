@@ -16,10 +16,15 @@ export class TodoListStore {
         return Object.values(this.todos);
     }
 
+    @computed get unfinishedtodo() {
+        return Object.values(this.todos).filter(todo => !todo.finished );
+    }
+
     @action
     setTodos(todos) {
         this.todos = todos
     }
+
 }
 
 export default TodoListStore;

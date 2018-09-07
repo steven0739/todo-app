@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
+import './TodoListView.css';
 
 @observer 
 export default class TodoListView extends Component {
@@ -18,6 +19,6 @@ const TodoView = observer(({todo}) =>
             type="checkbox"
             checked={todo.finished}
             onClick={() => todo.finished = !todo.finished}
-        />{todo.title}
+        /><span className={todo.finished ? 'strike' : ''}>{todo.title}</span>
     </li>
 )
