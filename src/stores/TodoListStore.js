@@ -5,7 +5,8 @@ export class Todo {
     @observable title = "";
     @observable finished = false;
 
-    constructor(title) {
+    constructor(id, title) {
+        this.id = id;
         this.title = title;
     }
 }
